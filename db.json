@@ -1,0 +1,103 @@
+{
+  "actividades": [
+    {
+      "id": 1,
+      "nombre": "clases nuevas",
+      "proyecto": {
+        "id": 1,
+        "nombre": "inovacion"
+      },
+      "categoria": "codigo",
+      "horas": 8,
+      "costos": false
+    },
+    {
+      "id": 2,
+      "nombre": "mas casos de uso",
+      "proyecto": {
+        "id": 2,
+        "nombre": "Pharmacy"
+      },
+      "categoria": "analisis",
+      "horas": 7,
+      "costos": false
+    },
+    {
+      "id": 3,
+      "nombre": "edicion de procesos",
+      "proyecto": {
+        "id": 3,
+        "nombre": "Mantenimiento"
+      },
+      "categoria": "codigo",
+      "horas": 5,
+      "costos": false
+    },
+    {
+      "id": 4,
+      "nombre": "nuevas pantallas",
+      "proyecto": {
+        "id": 4,
+        "nombre": "Famsa"
+      },
+      "categoria": "requerimientos",
+      "horas": 6,
+      "costos": true
+    },
+    {
+      "id": 5,
+      "nombre": "decidir sobre que hacer",
+      "proyecto": {
+        "id": 5,
+        "nombre": "Sima"
+      },
+      "categoria": "juntas",
+      "horas": 8,
+      "costos": false
+    },
+    {
+      "id": 6,
+      "nombre": "clases angular",
+      "proyecto": {
+        "id": 1,
+        "nombre": "inovacion"
+      },
+      "categoria": "capacitaciones",
+      "horas": 8,
+      "costos": false
+    },
+    {
+      "id": 7,
+      "nombre": "nueva tecnologia",
+      "proyecto": {
+        "id": 1,
+        "nombre": "inovacion"
+      },
+      "categoria": "analisis",
+      "horas": 8,
+      "costos": false
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 1,
+      "nombre": "inovacion"
+    },
+    {
+      "id": 2,
+      "nombre": "Pharmacy"
+    },
+    {
+      "id": 3,
+      "nombre": "Mantenimiento"
+    },
+    {
+      "id": 4,
+      "nombre": "Famsa"
+    },
+    {
+      "id": 5,
+      "nombre": "Sima"
+    }
+  ]
+}
