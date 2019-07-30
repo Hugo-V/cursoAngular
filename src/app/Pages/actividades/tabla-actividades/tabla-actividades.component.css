@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+/*.tabla-clase {
+  background-color:beige;
+  align-items:center;
+}*/
+td, tr {
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  /*color:black;*/
+}

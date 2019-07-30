@@ -1,0 +1,16 @@
+<form [formGroup]="proyecto" (ngSubmit)="submit()">
+  <div style="margin:10px">
+    <button type="submit" mat-raised-button color="primary">Guardar</button>
+  </div>
+  <mat-grid-list cols="2" rowHeight="4.5:1">
+    <mat-grid-tile>
+      <div class="div-form">
+        <mat-form-field class="input-class">
+          <input matInput placeholder="Nombre" formControlName="nombre">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
+
+{{proyecto.value|json}}

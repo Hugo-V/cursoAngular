@@ -1,0 +1,43 @@
+<div style="margin:10px">
+  <button mat-raised-button color="primary" routerLink="/actividades/detalles">nuevo</button>
+</div>
+<table class="tabla-clase">
+  <thead>
+    <tr>
+      <th>
+        <label>Nombre</label>
+      </th>
+      <th>
+        <label>Proyecto</label>
+      </th>
+      <th>
+        <label>Categoria</label>
+      </th>
+      <th>
+        <label>Horas</label>
+      </th>
+      <th>
+        <label>Costos</label>
+      </th>
+      <th>
+        <label>Borrar</label>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let actividad of Actividades">
+      <td><a (click)="navegarUrl(actividad.id)">{{actividad?.nombre}}</a></td>
+      <td>{{actividad?.proyecto.nombre | uppercase}}</td>
+      <td>{{actividad?.categoria}}</td>
+      <td>
+        <app-progres-spiner [valor]="actividad?.horas" [total]="'8'"></app-progres-spiner>
+      </td>
+      <td>{{actividad?.costos | boleanConvert}}</td>
+      <td>
+        <button mat-icon-button (click)="borrar(actividad.id)" aria-label="Example icon-button with a heart icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

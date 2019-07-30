@@ -1,0 +1,25 @@
+<div style="margin:10px">
+  <button mat-raised-button color="primary" routerLink="/proyectos/detalles">nuevo</button>
+</div>
+<table class="tabla-clase">
+  <thead>
+    <tr>
+      <th>
+        <label>Nombre</label>
+      </th>
+      <th>
+        <label>Borrar</label>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let proyecto of proyectos">
+      <td><a (click)="navegarUrl(proyecto.id)">{{proyecto?.nombre}}</a></td>
+      <td>
+        <button mat-icon-button (click)="borrar(proyecto.id)" aria-label="Example icon-button with a heart icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

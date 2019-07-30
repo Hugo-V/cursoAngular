@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span>Welcome to {{ title }}!</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <mat-icon class="casita" (click)="drawer.toggle()" aria-hidden="false" aria-label="Example heart icon">home</mat-icon>
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side" disableClose="false">
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+      <div style="margin:10px">
+        <button mat-raised-button color="primary" routerLink="/">inicio</button>
+      </div>
+      <div style="margin:10px">
+        <button mat-raised-button color="primary" routerLink="/actividades/tabla">Actividades</button>
+      </div>
+      <div style="margin:10px">
+        <button mat-raised-button color="primary" routerLink="/proyectos/tabla">Proyectos</button>
+      </div>
+    </div>
+  </mat-drawer>
+
+  <router-outlet></router-outlet>
+
+</mat-drawer-container>

@@ -1,0 +1,57 @@
+<form [formGroup]="actividad" (ngSubmit)="submit()">
+  <div style="margin:10px">
+    <button type="submit" mat-raised-button color="primary">Guardar</button>
+  </div>
+  <mat-grid-list cols="2" rowHeight="4.5:1">
+    <mat-grid-tile>
+      <div class="div-form">
+        <mat-form-field class="input-class">
+          <input matInput placeholder="Nombre" formControlName="nombre">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="div-form">
+        <mat-form-field class="input-class">
+          <mat-label>Proyecto</mat-label>
+          <mat-select formControlName="proyecto" name="proyecto.nombre" [compareWith]="compareFn">
+            <mat-option *ngFor="let proyect of proyectos" [value]="proyect">
+              {{proyect?.nombre}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="div-form">
+        <mat-form-field class="input-class">
+          <input matInput placeholder="Categoria" formControlName="categoria">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="div-form">
+        <mat-form-field class="input-class">
+          <input matInput filtroHoras placeholder="Horas" formControlName="horas">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="div-form" style="height:65.5px;
+  width:180px;">
+        <mat-slide-toggle class="example-margin"
+                          color="primary"
+                          formControlName="costos">
+          Costos
+        </mat-slide-toggle>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile *ngIf="actividad.value.horas">
+      <app-progres-spiner [valor]="actividad.value.horas>'8'?0:actividad.value.horas" [total]="'8'"></app-progres-spiner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>
+
+{{actividad.value | json}}
+
+{{actividad.status }}
